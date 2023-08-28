@@ -12,13 +12,17 @@ public class Huesped {
     private String telefono;
     private int cantVeces;
     private int capOcupantes;
+    private int tipoHabitacion;
     
+    
+
     public Huesped(){
         idHuesped = 0;
         nombre = "";
         telefono = "";
         cantVeces = 0;
         capOcupantes= 0;
+        tipoHabitacion = 0;
     }
 
     /** 
@@ -28,12 +32,13 @@ public class Huesped {
      * @param cantVeces
      * @param capOcupantes
      */
-    public Huesped(int idHuesped, String nombre, String telefono, int cantVeces, int capOcupantes){
+    public Huesped(int idHuesped, String nombre, String telefono, int cantVeces, int capOcupantes, int tipoHabitacion){
         this.idHuesped = idHuesped;
         this.nombre = nombre;
         this.telefono = telefono;
         this.cantVeces = cantVeces;
         this.capOcupantes= capOcupantes;
+        this.tipoHabitacion= tipoHabitacion;
     }
 
 
@@ -114,6 +119,20 @@ public class Huesped {
      */
     public void setCapOcupantes(int capOcupantes) {
         this.capOcupantes = capOcupantes;
+    }
+
+    /** 
+     * @return int
+     */
+    public int getTipoHabitacion() {
+        return tipoHabitacion;
+    }
+
+    /** 
+     * @param tipoHabitacion
+     */
+    public void setTipoHabitacion(int tipoHabitacion) {
+        this.tipoHabitacion = tipoHabitacion;
     }
 
     /** 

@@ -37,8 +37,8 @@ public class Principal {
                 
                 if(opcion == 1){
 
-                    String nombre = "", telefono = "", cantV = "", cantO= "";
-                    int cantVeces = 0, cantOcupantes = 0;
+                    String nombre = "", telefono = "", cantV = "", cantO= "", tipoHabitacion="";
+                    int cantVeces = 0, cantOcupantes = 0, tipoHabitacion = 0 ;
 
                     System.out.println("\n\nIngrese nombre del huesped: ");
                     nombre = teclado.nextLine();
@@ -64,8 +64,18 @@ public class Principal {
                         } catch (Exception e) {
                              System.out.println("\nError, numero invalido");
                         }
-                      
-                        hotel.recibirHuesped(0,nombre, telefono, cantVeces, cantOcupantes);
+
+                        System.out.println("\nIngrese el tipo de habitación que desea 1)Suite 2)Deluxe 3)Estandar: ");
+                        tipoHabitacion = teclado.nextLine();
+
+                        try {
+                            tipoHabitacion = Integer.parseInt(tipoHabitacion);
+                        } catch (Exception e) {
+                             System.out.println("\nError, numero invalido");
+                        }
+                        if(tipoHabitacion >= 1 && tipoHabitacion <=3){
+                            hotel.recibirHuesped(nombre, telefono, cantVeces, cantOcupantes, tipoHabitacion);
+                        }
 
                     }else{
                         System.out.println("\nError, número invalido");
