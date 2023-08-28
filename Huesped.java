@@ -1,3 +1,10 @@
+/**
+ * Universidad del Valle de Guatemala
+ * @author Angie Nadissa Vela López, 23764
+ * @description Clase que modela un huespéd que se hospedará en el hotel
+ * @date creación 28/08/2023 última modificación 28/08/23
+ */
+
 public class Huesped {
 
     private int idHuesped;

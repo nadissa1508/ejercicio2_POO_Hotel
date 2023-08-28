@@ -1,3 +1,10 @@
+/**
+ * Universidad del Valle de Guatemala
+ * @author Angie Nadissa Vela López, 23764
+ * @description Clase que modela la habitación de un hotel
+ * @date creación 28/08/2023 última modificación 28/08/23
+ */
+
 public class Habitacion {
     private int idHabitacion;
     private int idHuesped;
