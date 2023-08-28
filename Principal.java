@@ -37,49 +37,55 @@ public class Principal {
                 
                 if(opcion == 1){
 
-                    String nombre = "", telefono = "", cantV = "", cantO= "", tipoHabitacion="";
-                    int cantVeces = 0, cantOcupantes = 0, tipoHabitacion = 0 ;
+                    if(hotel.getBanderaHuesped()){
 
-                    System.out.println("\n\nIngrese nombre del huesped: ");
-                    nombre = teclado.nextLine();
-
-                    System.out.println("\nIngrese telefono de emergencia: ");
-                    telefono = teclado.nextLine();
-
-                    System.out.println("\nCantidad de veces que el huesped ha visitado el hotel: ");
-                    cantV = teclado.nextLine();  
-
-                    try{
-                        cantVeces = Integer.parseInt(cantV);
-                    }catch(Exception e){
-                        System.out.println("\nError, ingrese un número");
-                    }
-
-                    if(cantVeces > 0){
-                        System.out.println("\nCantidad de ocupantes de la habitacion: ");
-                        cantO = teclado.nextLine();
-
-                        try {
-                            cantOcupantes = Integer.parseInt(cantO);
-                        } catch (Exception e) {
-                             System.out.println("\nError, numero invalido");
+                        String nombre = "", telefono = "", cantV = "", cantO= "", tipoHab="";
+                        int cantVeces = 0, cantOcupantes = 0, tipoHabitacion = 0 ;
+    
+                        System.out.println("\n\nIngrese nombre del huesped: ");
+                        nombre = teclado.nextLine();
+    
+                        System.out.println("\nIngrese telefono de emergencia: ");
+                        telefono = teclado.nextLine();
+    
+                        System.out.println("\nCantidad de veces que el huesped ha visitado el hotel: ");
+                        cantV = teclado.nextLine();  
+    
+                        try{
+                            cantVeces = Integer.parseInt(cantV);
+                        }catch(Exception e){
+                            System.out.println("\nError, ingrese un número");
                         }
-
-                        System.out.println("\nIngrese el tipo de habitación que desea 1)Suite 2)Deluxe 3)Estandar: ");
-                        tipoHabitacion = teclado.nextLine();
-
-                        try {
-                            tipoHabitacion = Integer.parseInt(tipoHabitacion);
-                        } catch (Exception e) {
-                             System.out.println("\nError, numero invalido");
-                        }
-                        if(tipoHabitacion >= 1 && tipoHabitacion <=3){
-                            hotel.recibirHuesped(nombre, telefono, cantVeces, cantOcupantes, tipoHabitacion);
+    
+                        if(cantVeces > 0){
+                            System.out.println("\nCantidad de ocupantes de la habitacion: ");
+                            cantO = teclado.nextLine();
+    
+                            try {
+                                cantOcupantes = Integer.parseInt(cantO);
+                            } catch (Exception e) {
+                                 System.out.println("\nError, numero invalido");
+                            }
+    
+                            System.out.println("\nIngrese el tipo de habitación que desea 1)Suite 2)Deluxe 3)Estandar: ");
+                            tipoHab = teclado.nextLine();
+    
+                            try {
+                                tipoHabitacion = Integer.parseInt(tipoHab);
+                            } catch (Exception e) {
+                                 System.out.println("\nError, numero invalido");
+                            }
+                            if(tipoHabitacion >= 1 && tipoHabitacion <=3){
+                                hotel.recibirHuesped(nombre, telefono, cantVeces, cantOcupantes, tipoHabitacion);
+                            }
+    
+                        }else{
+                            System.out.println("\nError, número invalido");
                         }
 
                     }else{
-                        System.out.println("\nError, número invalido");
-                    }
+                        System.out.println("\nError, verificar si el huesped recien ingresado puede reservar una habitación antes de ingresar otro huesped");
+                    }    
 
 
                 }else if(opcion == 2){

@@ -138,7 +138,7 @@ public class Habitacion {
     /** 
      * @return String
      */
-    public toString(){
+    public String toString(){
         return "";
     }
 }

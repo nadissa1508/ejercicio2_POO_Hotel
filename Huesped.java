@@ -13,8 +13,6 @@ public class Huesped {
     private int cantVeces;
     private int capOcupantes;
     private int tipoHabitacion;
-    
-    
 
     public Huesped(){
         idHuesped = 0;
@@ -40,9 +38,7 @@ public class Huesped {
         this.capOcupantes= capOcupantes;
         this.tipoHabitacion= tipoHabitacion;
     }
-
-
-    
+ 
     /** 
      * @return int
      */
@@ -138,7 +134,7 @@ public class Huesped {
     /** 
      * @return String
      */
-    public toString(){
+    public String toString(){
         return "";
     }
 
