@@ -7,6 +7,7 @@
 
 public class Hotel {
     private boolean banderaHuesped;
+    private boolean nuevaflag;
     private int cantHuespedes;
     private Habitacion[] habitaciones;
     private Huesped[] huespedes;
